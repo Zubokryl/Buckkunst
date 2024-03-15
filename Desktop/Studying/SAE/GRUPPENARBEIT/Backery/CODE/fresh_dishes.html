@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    
+    <title>Bakkunst</title>
+</head>
+<body>
+
+   
+    <header class="header">
+        <div class="logo-container">
+            <img src="icons/Logo-in-weiß.svg" alt="Logo" class="logo">
+        </div>
+    
+        <div class="nav-container">
+    
+            <a href="index.html" class="nav-link" id="home-link">HOME</a>
+
+            <div class="dropdown" id="dropdown">
+                <a href="#">Köstlichkeiten</a>
+                <a href="fresh_dishes.html">Frische Produkte</a>
+            </div>
+            <a href="#" class="nav-link">PRODUKTE</a>
+            <a href="#" class="nav-link">CATERING</a>
+            <a href="#" class="nav-link">ÜBER UNS</a>
+            <a href="#" class="nav-link">BLOG</a>
+        </div>
+    
+        <div class="contact-container">
+            <a href="#" class="contact-link">KONTAKT</a>
+            <img src="icons/whatsupp.svg" alt="Whatsapp" class="whatsapp-icon">
+            <img src="icons/basket.svg" alt="Cart" class="cart-icon">
+        </div>
+
+        <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+        
+    
+
+    <section class="fresh-products">
+
+      <h2 class="fresh-products__header">Täglich frisch gebackenen Produkte</h2>
+
+      <div class="fresh-products__circle-container">
+
+        <div class="fresh-products__circle">
+            <img src="img/frish_1.jpg" alt="Description of your image">
+        </div>
+        <div class="fresh-products__circle">
+            <img src="img/frish_2.jpg" alt="Description of your image">
+        </div>
+        <div class="fresh-products__circle">
+            <img src="img/frish_3.jpg" alt="Description of your image">
+        </div>
+        <div class="fresh-products__circle">
+            <img src="img/frish_4.jpg" alt="Description of your image">
+        </div>
+        <div class="fresh-products__circle">
+            <img src="img/frish_5.jpg" alt="Description of your image">
+        </div>
+      </div>
+    </section>
+
+    <style>
+
+
+.fresh-products__header {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.fresh-products__circle-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.fresh-products__circle {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  transition: transform 0.8s ease;
+}
+
+.fresh-products__circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fresh-products__circle:nth-child(1) {
+  top: -1rem; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.fresh-products__circle:nth-child(2) {
+  top: 5rem; 
+  left: 25%;
+}
+
+.fresh-products__circle:nth-child(3) {
+  top: 5rem; 
+  left: 63%;
+}
+
+.fresh-products__circle:nth-child(4) {
+  top: 18rem; 
+  left: 12.5%;
+}
+
+.fresh-products__circle:nth-child(5) {
+  top: 16rem; 
+  left: 80%;
+}
+
+.fresh-products__circle:hover {
+  transform: scale(1.8);
+}
+
+    </style>
