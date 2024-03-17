@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+    /* #################################### CATERING #################################### */
+    .intro-wrapper {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .desktop-img {
+        display: none;
+    }
+
+    .mobile-img {
+        display: flex;
+        max-width: 100%;
+        flex: 1;
+    }
+
+    /* #################################### FOOTER #################################### */
+    .footer-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .footer-img-desktop {
+        display: none;
+    }
+
+    .footer-img-mobile {
+        display: flex;
+        max-width: 100%;
+        flex: 1;
+    }
+}

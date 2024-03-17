@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    
+    <title>Bakkunst</title>
+</head>
+
+  
+<header class="header">
+
+  <div class="logo-container">
+            <a href="index.html">
+              <img src="icons/Logo-in-weiß.svg" alt="Logo" class="logo">
+            </a>
+          </div>
+
+  <div class="nav-container">
+
+      <a href="index.html" class="nav-link" id="home-link">HOME</a>
+
+      <div class="dropdown" id="dropdown">
+          <a href="#delicacies">Köstlichkeiten</a>
+          <a href="/fresh_dishes.html">Frische Produkte</a>
+      </div>
+      <a href="index.html#products" class="nav-link">PRODUKTE</a>
+      <a href="catering.html" class="nav-link">CATERING</a>
+      <a href="#" class="nav-link">ÜBER UNS</a>
+      <a href="blog.html" class="nav-link">BLOG</a>
+  </div>
+
+  <div class="contact-container">
+    <a href="#" class="contact-link">KONTAKT</a>
+    <img src="icons/whatsupp.svg" alt="Whatsapp" class="whatsapp-icon">
+    <a href="order.html" class="cart-link">
+        <img src="icons/basket.svg" alt="Cart" class="cart-icon">
+      </a>
+</div>
+
+  <div class="burger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+  </div>
+
+</header>
+
+
+
+
+
+<body>
+
+
+    <div class="slideshow">
+      <div class="carousel">
+        <div class="slide active">
+          <img src="img/bread_1.jpg" />
+        </div>
+        <div class="slide">
+          <img src="img/bread_2.jpg" />
+        </div>
+        <div class="slide">
+          <img src="img/bread_3.jpg" />
+        </div>
+        <div class="slide">
+          <img src="img/bread_4.jpg" />
+        </div>
+        <div class="slide">
+            <img src="img/bread_5.jpg" />
+          </div>
+          <div class="slide">
+            <img src="img/bread_6.jpg" />
+          </div>
+      </div>
+
+      <div class="controls">
+        <a href="#" data-index="1" class="active">
+          <img src="img/bread_1.jpg" />
+        </a>
+        <a href="#" data-index="2">
+          <img src="img/bread_2.jpg" />
+        </a>
+        <a href="#" data-index="3">
+          <img src="img/bread_3.jpg" />
+        </a>
+        <a href="#" data-index="4">
+          <img src="img/bread_4.jpg" />
+        </a>
+        <a href="#" data-index="5">
+            <img src="img/bread_5.jpg" />
+          </a>
+       <a href="#" data-index="6">
+            <img src="img/bread_6.jpg" />
+       </a>
+      </div>
+
+    </div>
+
+ 
+
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.slideshow {
+  height: 100vh;
+  background-color: rgb(253, 253, 253);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 80rem;
+  height: 80rem;
+  border: 7rem solid#E2781A;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -55%;
+  flex-shrink: 0;
+  transition: rotate 1s;
+}
+
+.slide {
+  width: 20rem;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s; 
+}
+
+.slide.active {
+  z-index: 2; 
+  opacity: 1;
+}
+
+.slide:nth-child(-n+4) {
+  z-index: 0;
+}
+
+.slide:nth-child(1) {
+  bottom: -20rem;
+  z-index: 1;
+}
+
+.slide:nth-child(2) {
+  left: -20rem;
+ 
+}
+
+.slide:nth-child(3) {
+  top: -20rem;
+
+}
+
+.slide:nth-child(4) {
+  right: -20rem;
+
+}
+
+.slide:nth-child(5) {
+  bottom: -20rem;
+
+
+}
+
+.slide:nth-child(6) {
+  left: -20rem;
+
+}
+
+.slide.active img {
+  transform: scale(2.5);
+  transition: transform 0.5s 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+  border-radius: 50%; 
+}
+
+.controls {
+  position: sticky;
+  bottom: 5rem;
+}
+
+.controls a {
+  padding: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10rem;
+  transition: background-color 1s;
+}
+
+.controls a.active {
+  background-color: #252525;
+}
+
+.controls img {
+  width: 10rem;
+  border-radius: 50%;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #252525;
+    transition: top 0.3s; 
+    z-index: 1000; 
+}
+
+.hidden {
+    top: -100px; 
+}
+
+
+    </style>
+
+    <script>
+
+const carousel = document.querySelector(".carousel");
+const slides = document.querySelectorAll(".slide");
+const controlLinks = document.querySelectorAll(".controls a");
+
+let i = 0,
+  j = 1,
+  intervalId;
+
+const intervalFn = () => {
+  intervalId = setInterval(() => {
+    carousel.style.rotate = `-${++i * 90}deg`;
+
+    document.querySelector(".slide.active").classList.remove("active");
+    const activeSlide = document.querySelector(`.slide:nth-child(${++j})`);
+    activeSlide.classList.add("active");
+
+    document.querySelector("a.active").classList.remove("active");
+    const activeLink = document.querySelector(`.controls a:nth-child(${j})`);
+    activeLink.classList.add("active");
+
+    j === 6 && (j = 0);
+  }, 4000);
+};
+
+intervalFn();
+
+controlLinks.forEach((control) => {
+  control.addEventListener("click", () => {
+    clearInterval(intervalId);
+    carousel.style.rotate = `-${
+      (i - j + Number(control.dataset.index)) * 90
+    }deg`;
+
+    document.querySelector(".slide.active").classList.remove("active");
+    const activeSlide = document.querySelector(
+      `.slide:nth-child(${control.dataset.index})`
+    );
+    activeSlide.classList.add("active");
+
+    document.querySelector("a.active").classList.remove("active");
+    control.classList.add("active");
+  });
+});
+
+carousel.addEventListener("mouseenter", () => {
+  clearInterval(intervalId);
+  console.log("Pause");
+});
+
+carousel.addEventListener("mouseleave", () => {
+  intervalFn();
+  console.log("Play");
+});
+
+
+
+    </script>
+
+
+</body>
+</html>

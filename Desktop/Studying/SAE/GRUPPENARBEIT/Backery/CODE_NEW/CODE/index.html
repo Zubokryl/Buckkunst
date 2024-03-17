@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog_catering.css" />
+    <link rel="stylesheet" href="media-queries_blog_catering.css" />
+    <!-- blog-popup.js wurde mit Open AIs ChatGPT kreiert -->
+    <script src="blog-popup.js"></script> 
+    <script src="script.js"></script>
+    
+    <title>Bakkunst</title>
+</head>
+<body>
+
+    <header class="header">
+        
+        <div class="logo-container">
+            <a href="index.html">
+              <img src="icons/Logo-in-weiß.svg" alt="Logo" class="logo">
+            </a>
+          </div>
+    
+        <div class="nav-container">
+    
+            <a href="index.html" class="nav-link" id="home-link">HOME</a>
+
+            <div class="dropdown" id="dropdown">
+                <a href="#delicacies">Köstlichkeiten</a>
+                <a href="/fresh_dishes.html">Frische Produkte</a>
+            </div>
+            <a href="#products" class="nav-link">PRODUKTE</a>
+            <a href="catering.html" class="nav-link">CATERING</a>
+            <a href="#" class="nav-link">ÜBER UNS</a>
+            <a href="blog.html" class="nav-link">BLOG</a>
+        </div>
+    
+        <div class="contact-container">
+            <a href="#" class="contact-link">KONTAKT</a>
+            <img src="icons/whatsupp.svg" alt="Whatsapp" class="whatsapp-icon">
+            <a href="order.html" class="cart-link">
+                <img src="icons/basket.svg" alt="Cart" class="cart-icon">
+              </a>
+        </div>
+
+        <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+    <main>
+    <section id="home-section" class="hero-section">
+
+        <div class="hero-section__container" >
+
+            <div class="hero-section__left"></div>
+
+            <div class="hero-section__right">
+
+              <div class="hero-section__logo" >
+                  <img src="icons/Logo.svg" alt="Logo_img">
+              </div>
+                
+             
+
+              <h1 class="hero-section__title">Riechen Sie die 
+                frisch gebackenen Köstlichkeiten?
+                </h1>
+              <p class="hero-section__text" >Willkommen in unserer handwerklichen Bäckerei, die mit dem Duft von frischen Backwaren angereichert ist.
+                Mit exklusiven Backwaren aus hochwertigen Zutaten kreieren wir die perfekte Mischung aus Geschmack und Aroma.</p>
+
+                <a href="fresh_dishes.html">
+                    <img src="icons/spoon.svg" alt="arrow" class="hero-section__arrow-right">
+                </a>
+
+            </div>
+         
+        </div>
+   
+    </section>
+
+   <!---- <div class="divider"></div>------>
+
+ 
+
+  <section id="products" class="our-products">
+
+    <div class="our-products__container">
+
+        <h2 class="section-title" data-reveal="left">Unsere Produkte</h2>
+
+        <div class="products-container">
+
+            <a href="bread.html">
+                <div class="product" data-reveal="left">
+                    <p>Br<img src="icons/brot.svg" alt="Brot">t</p>
+                </div>
+            </a>
+          
+           <div class="product" data-reveal="left">
+                <p>Cr<img src="icons/croissant.svg" alt="Croissant">ssant</p>
+            </div>
+
+            <div class="product" data-reveal="left">
+                <p>Macar<img src="icons/macaroons.svg" alt="Macaroons">ns</p>
+            </div>
+
+            <a href="cakes.html">
+            <div class="product" data-reveal="left">
+                <p>T<img src="icons/cake.svg" alt="Torte">rten</p>
+            </div>
+          </a>
+
+            <div class="product" data-reveal="left">
+                <p>K<img src="icons/pie.svg" alt="Kuchen">chen</p>
+            </div>
+
+            <div class="product" data-reveal="left">
+                <p>K<img src="icons/cookies.svg" alt="Kekse">kse</p>
+            </div>
+    
+        </div>
+
+          <div class="last-products">
+            <div class="last_product" data-reveal="left">
+                <p>R<img src="icons/roll.svg" alt="Rollen">llen</p>
+            </div>
+
+            <div class="last_product" data-reveal="left">
+               
+                <p>W<img src="icons/waffles.svg" alt="Waffeln">ffeln</p>
+            </div>
+          </div>
+
+
+      
+        <img src="icons/croissant_pic.svg" alt="Bottom Image" class="bottom-image">
+    </div>
+</section>
+
+   
+<section id="delicacies" class="our-specials">
+
+            <div class="our-specials__header">
+              Unsere beliebtesten Köstlichkeiten
+            </div>
+
+            <div class="our-specials__products">
+
+        <div class="product-card">
+  <div class="product-card__container">
+    <div class="product-card__image">
+      <img src="img/Apfelstrudel.jpg" alt="Apfelstrudel">
+    </div>
+    <div class="product-card__title">Apfelstrudel</div>
+    <div class="product-card__price">3.99€</div>
+    <div class="product-card__quantity">
+      <div class="product-card__quantity-btn decrement">-</div>
+      <div class="product-card__quantity-number">1</div>
+      <div class="product-card__quantity-btn increment">+</div>
+    </div>
+  </div>
+</div>
+              
+
+              <div class="product-card">
+                <div class="product-card__container">
+                    <div class="product-card__image">
+                        <img src="img/Topfenstrudel.jpg" alt="Topfenstrudel">
+                      </div>
+                  <div class="product-card__title">Topfenstrudel</div>
+                  <div class="product-card__price">4.49€</div>
+                  <div class="product-card__quantity">
+                    <div class="product-card__quantity-btn decrement">-</div>
+                    <div class="product-card__quantity-number">1</div>
+                    <div class="product-card__quantity-btn increment">+</div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="product-card">
+                <div class="product-card__container">
+                    <div class="product-card__image">
+                        <img src="img/Kokosbrot.jpg" alt="Kokosbrot">
+                      </div>
+                  <div class="product-card__title">Kokosbrot</div>
+                  <div class="product-card__price">5.99€</div>
+                  <div class="product-card__quantity">
+                    <div class="product-card__quantity-btn decrement">-</div>
+                    <div class="product-card__quantity-number">1</div>
+                    <div class="product-card__quantity-btn increment">+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__container">
+                    <div class="product-card__image">
+                        <img src="img/Milchbrot.jpg" alt="Milchbrot">
+                      </div>
+                  <div class="product-card__title">Milchbrot</div>
+                  <div class="product-card__price">3.79€</div>
+                  <div class="product-card__quantity">
+                    <div class="product-card__quantity-btn decrement">-</div>
+                    <div class="product-card__quantity-number">1</div>
+                    <div class="product-card__quantity-btn increment">+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__container">
+                    <div class="product-card__image">
+                        <img src="img/Heidelbeerkuchen.jpg" alt="Heidelbeerkuchen">
+                      </div>
+                  <div class="product-card__title">Heidelbeerkuchen</div>
+                  <div class="product-card__price">6.29€</div>
+                  <div class="product-card__quantity">
+                    <div class="product-card__quantity-btn decrement">-</div>
+                    <div class="product-card__quantity-number">1</div>
+                    <div class="product-card__quantity-btn increment">+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__container">
+                    <div class="product-card__image">
+                        <img src="img/käsebrot.jpg" alt="käsebrot">
+                      </div>
+                  <div class="product-card__title">Käsebrot</div>
+                  <div class="product-card__price">7.99€</div>
+                  <div class="product-card__quantity">
+                    <div class="product-card__quantity-btn decrement">-</div>
+                    <div class="product-card__quantity-number">1</div>
+                    <div class="product-card__quantity-btn increment">+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <section class="order-button">
+                <a href="order.html" class="order-button__link">Zur Bestellung</a>
+              </section>
+          </section>
+
+
+
+    <section class="about-us">
+       
+    </section>
+
+  
+    <section class="quality-promises">
+       
+    </section>
+
+   
+    <section class="blog">
+          <section class="blog">
+              <div class="blog-container">
+                  <h2 class="style-h2">Neuigkeiten</h2>
+                  <div class="card-container">
+                      <div class="card">
+                          <img
+                              src="img/blog/lehrlinge.jpg"
+                              alt="lehrlinge"
+                          />
+                          <div class="card-text">
+                              <h3>Lehrlingsmeisterschaft 2024</h3>
+                              <p>
+                                  Stolz präsentieren unsere beiden Lehrlinge
+                                  ihre Auszeichnung der diesjährigen
+                                  Bäcker-Lehrlingsmeisterschaft.
+                              </p>
+                          </div>
+                      </div>
+                      <div class="card">
+                          <img
+                              src="img/blog/neueroeffnung.jpg"
+                              alt="neueroeffnung"
+                          />
+                          <div class="card-text">
+                              <h3>Neueröffnung in Wien</h3>
+                              <p>
+                                  Wir freuen uns sehr verkünden zu dürfen,
+                                  dass in nächster Zeit eine weitere Filiale
+                                  in Wien entstehen wird.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card-container">
+                      <div class="card">
+                          <img
+                              src="img/blog/brotsorten.jpg"
+                              alt="brotsorten"
+                          />
+                          <div class="card-text">
+                              <h3>neue Getreidesorten</h3>
+                              <p>
+                                  In diesem Jahr haben wir uns vorgenommen
+                                  neue, kreative und aromatische Sorten in
+                                  unsere Produktpalette anzubieten.
+                              </p>
+                          </div>
+                      </div>
+                      <div class="card">
+                          <img
+                              src="img/blog/catering-tisch.jpg"
+                              alt="catering-tisch"
+                          />
+                          <div class="card-text">
+                              <h3>zur Backkunst gehört auch Catering dazu</h3>
+                              <p>
+                                  Backen ist unsere Leidenschaft und diese mit
+                                  mehr Menschen zu teilen erfüllt uns.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+    
+
+    
+    <section class="contacts">
+      
+    </section>
+  </main>
+    <footer>
+      <div class="footer-wrapper">
+          <div class="footer-container">
+              <h2 class="style-h2 color-white">Besuchen Sie uns</h2>
+              <div class="socials">
+                  <a href="">
+                      <img src="./icons/icons8-facebook.svg" alt="" />
+                  </a>
+                  <a href="">
+                      <img src="./icons/icons8-whatsapp.svg" alt="" />
+                  </a>
+                  <a href="">
+                      <img src="./icons/icons8-instagram.svg" alt="" />
+                  </a>
+                  <a href="">
+                      <img src="./icons/icons8-snapchat.svg" alt="" />
+                  </a>
+              </div>
+              <div class="newsletter-input">
+                  <input
+                      class="input-style"
+                      type="email"
+                      name="Newsletter"
+                      placeholder="Newsletter"
+                  />
+                  <div class="mail-btn">
+                      <img
+                          src="./icons/mail.svg"
+                          alt=""
+                          class="mail-icon"
+                      />
+                  </div>
+              </div>
+              <div class="contact-info">
+                  <p>
+                      121 Rock Street, 21 Avenue, New York,<br />
+                      NY 92103-9000
+                  </p>
+                  <p>Montag-Samstag 9:00 – 19:00</p>
+                  <p>
+                      Sonntags <br />
+                      10:00 – 18:00
+                  </p>
+                  <p>1 (234) 567-891</p>
+              </div>
+              <img
+                  src="./icons/weisses-logo.svg"
+                  alt="brand logo"
+                  class="footer-logo"
+              />
+          </div>
+          <img
+              src="img/footer/footer-desktop.jpg"
+              alt=""
+              class="footer-img-desktop"
+          />
+          <img
+              src="img/footer/footer-mobile.jpg"
+              alt=""
+              class="footer-img-mobile"
+          />
+      </div>
+  </footer>
+    <div id="scroll-to-top" class="scroll-to-top">&#9650;</div>
+  </body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestellung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="logo-container">
+            <a href="index.html">
+              <img src="icons/Logo-in-weiß.svg" alt="Logo" class="logo">
+            </a>
+          </div>
+    
+        <div class="nav-container">
+    
+            <a href="index.html" class="nav-link" id="home-link">HOME</a>
+
+            <div class="dropdown" id="dropdown">
+                <a href="#delicacies">Köstlichkeiten</a>
+                <a href="/fresh_dishes.html">Frische Produkte</a>
+            </div>
+            <a href="index.html#products" class="nav-link">PRODUKTE</a>
+            <a href="catering.html" class="nav-link">CATERING</a>
+            <a href="#" class="nav-link">ÜBER UNS</a>
+            <a href="blog.html" class="nav-link">BLOG</a>
+        </div>
+    
+        <div class="contact-container">
+            <a href="#" class="contact-link">KONTAKT</a>
+            <img src="icons/whatsupp.svg" alt="Whatsapp" class="whatsapp-icon">
+            <a href="order.html" class="cart-link">
+                <img src="icons/basket.svg" alt="Cart" class="cart-icon">
+              </a>
+        </div>
+
+        <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+
+    <div class="container">
+
+    <div class="order">
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Preis</th>
+                    <th>Menge</th>
+                    <th>Gesamt</th>
+                    <th>Entfernen</th>
+                </tr>
+            </thead>
+            <tbody>
+             
+                <tr>
+                    <td>
+                        <img src="icons/cake.svg" alt="Produkt 1">
+                        <span class="rating">★★★★☆</span>
+                    </td>
+                    <td>20.00€</td>
+                    <td>
+                        <button class="decrease-quantity">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increase-quantity">+</button>
+                    </td>
+                    <td>20.00€</td>
+                    <td><button class="remove-product">✕</button></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <img src="icons/croissant.svg" alt="Produkt 1">
+                        <span class="rating">★★★★☆</span>
+                    </td>
+                    <td>5€</td>
+                    <td>
+                        <button class="decrease-quantity">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increase-quantity">+</button>
+                    </td>
+                    <td>5€</td>
+                    <td><button class="remove-product">✕</button></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <img src="icons/pie.svg" alt="Produkt 1">
+                        <span class="rating">★★★★☆</span>
+                    </td>
+                    <td>5€</td>
+                    <td>
+                        <button class="decrease-quantity">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increase-quantity">+</button>
+                    </td>
+                    <td>2.20€</td>
+                    <td><button class="remove-product">✕</button></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="icons/cookies.svg" alt="Produkt 1">
+                        <span class="rating">★★★★☆</span>
+                    </td>
+                    <td>3.99€</td>
+                    <td>
+                        <button class="decrease-quantity">-</button>
+                        <span class="quantity">2</span>
+                        <button class="increase-quantity">+</button>
+                    </td>
+                    <td>6.20€</td>
+                    <td><button class="remove-product">✕</button></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="icons/brot.svg" alt="Produkt 1">
+                        <span class="rating">★★★★☆</span>
+                    </td>
+                    <td>8€</td>
+                    <td>
+                        <button class="decrease-quantity">-</button>
+                        <span class="quantity">3</span>
+                        <button class="increase-quantity">+</button>
+                    </td>
+                    <td>2.99€</td>
+                    <td><button class="remove-product">✕</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total">
+            <p>Gesamtsumme: <span class="total-amount">5€</span></p>
+        </div>
+        <button class="confirm-order">Bestätigen</button>
+    </div>
+</div>
+
+
+<style>
+
+
+    body {
+        background-color: #ffffff; 
+        font-family: Petrona, sans-serif; 
+    }
+
+    .container {
+    max-width: 80%;
+    margin: 5rem auto;
+}
+    
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    th, td {
+        padding: 1rem;
+        border-bottom: 1px solid #dddddd;
+        text-align: left;
+        
+    }
+
+    th {
+        color: #E2781A; 
+        font-size: 1.5rem;
+    }
+    
+    th:first-child, td:first-child {
+        width: 30%; 
+        font-size: 1.5rem;
+    }
+    
+    .rating {
+        color: #E2781A; 
+    }
+    
+    .total {
+        text-align: right;
+       
+    }
+    
+    .total p {
+        color: #000000;
+        font-size: 1.5rem;
+        margin-top: 3rem;
+    
+    }
+    
+       .confirm-order {
+        background-color: #E2781A; 
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+        
+    }
+    
+    .confirm-order:hover {
+        background-color: #E2781A; 
+    }
+
+
+    @media screen and (max-width: 414px) {
+
+   .container {
+    max-width: 100%;
+    margin: 4rem auto;
+}
+    
+    .total p {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-right: 5rem;
+    
+    }
+    
+       .confirm-order {
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        margin-left: 6rem;
+        
+    }
+    
+    .confirm-order:hover {
+        background-color: #ffffff; 
+        color: #E2781A;
+        border: solid 3px #000000;
+    }
+
+    }
+
+</style>
+
+    <script src="script.js"></script>
+</body>
+</html>
