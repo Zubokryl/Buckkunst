@@ -91,27 +91,31 @@ window.addEventListener("DOMContentLoaded", scrollReveal);*/
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const decrementBtn = document.querySelector(".decrement");
-    const incrementBtn = document.querySelector(".increment");
-    const quantityNumber = document.querySelector(".product-card__quantity-number");
-  
-    decrementBtn.addEventListener("click", function() {
-      let quantity = parseInt(quantityNumber.textContent);
-      if (quantity > 1) {
-        quantity--;
-        quantityNumber.textContent = quantity;
-      }
+    const decrementBtns = document.querySelectorAll(".product-card__quantity-btn.decrement");
+    const incrementBtns = document.querySelectorAll(".product-card__quantity-btn.increment");
+    const quantityNumbers = document.querySelectorAll(".product-card__quantity-number");
+
+    decrementBtns.forEach((btn, index) => {
+      btn.addEventListener("click", function() {
+        let quantity = parseInt(quantityNumbers[index].textContent);
+        if (quantity > 1) {
+          quantity--;
+          quantityNumbers[index].textContent = quantity;
+        }
+      });
     });
-  
-    incrementBtn.addEventListener("click", function() {
-      let quantity = parseInt(quantityNumber.textContent);
-      quantity++;
-      quantityNumber.textContent = quantity;
+
+    incrementBtns.forEach((btn, index) => {
+      btn.addEventListener("click", function() {
+        let quantity = parseInt(quantityNumbers[index].textContent);
+        quantity++;
+        quantityNumbers[index].textContent = quantity;
+      });
     });
-  });
+});
+  
 
 
-  
 
 
   
